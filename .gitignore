@@ -1,0 +1,4 @@
+.git/
+nodemodules/
+.gcloudignore
+package-lock.json
