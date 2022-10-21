@@ -1,15 +1,32 @@
+<html>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script module src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.js"></script>
+	<script src='app.js' defer></script>
+</head>
 
-<form action="/api/test" method="POST">
+
+<body onload="onLoadFunction()">
 	<div>
-    	<label for="sentence">Send a sentence:</label>
-    	<br>
-    	<input name="sentence" id="sentence" size="80" value="This is an example sentence">
+		<label for="sentence">Send a sentence (max 50 characters and 5 messages):</label>
+		<br>
+		<input name="sentence" id="sentence" size="80"  maxlength="50" value="This is an example sentence">
 	</div>
-  
+
 	<div>
-    	<button>Submit</button>
-  	</div>        
-</form>  
+		<button id="submitButton">Submit</button>
+	</div>
+
+	<br>
+	<div>
+		Messages submitted: <strong id="numberOfMessages"></strong>
+	</div>
+	<br>
+	<div>
+		Your unique ID: <strong id="uuid"></strong>
+	</div>
+</body>
+
+</html>
