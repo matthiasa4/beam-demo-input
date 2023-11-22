@@ -6,7 +6,6 @@ var router = Router()
 var app = express();
 
 const PubSub = require('@google-cloud/pubsub');
-const projectId = 'matthias-sandbox';
 const pubsub = new PubSub();
 const topicName = 'frontend-log';
 
